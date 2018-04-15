@@ -8,6 +8,7 @@
 
 import Foundation
 import TraceLog
+import CoreData
 
 extension Date {
     func convertToString() -> String {

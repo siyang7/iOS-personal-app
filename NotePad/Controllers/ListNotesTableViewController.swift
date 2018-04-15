@@ -8,6 +8,7 @@
 
 import UIKit
 import TraceLog
+import CoreData
 
 class ListNotesTableViewController: UITableViewController {
     
@@ -51,7 +52,7 @@ class ListNotesTableViewController: UITableViewController {
         
         let note = notes[indexPath.row] // return # of notes in notes array
         cell.noteTitleLabel.text = note.title
-        cell.noteModificationTimeLabel.text = note.modificationTime?.convertToString()
+        cell.noteModificationTimeLabel.text = note.modificationTime?.convertToString() ?? "unknown"
       
         logInfo { "Leaving \(#function)" }
         return cell

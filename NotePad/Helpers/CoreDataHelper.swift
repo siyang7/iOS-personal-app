@@ -47,6 +47,7 @@ struct CoreDataHelper {
             let results = try context.fetch(fetchRequest)
             
             return results
+            
         } catch let error {
             print("Could not fetch \(error.localizedDescription)")
             

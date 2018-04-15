@@ -8,6 +8,7 @@
 
 import UIKit
 import TraceLog
+import CoreData
 
 class ListNotesTableViewCell: UITableViewCell {
     @IBOutlet weak var noteTitleLabel: UILabel!

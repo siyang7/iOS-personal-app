@@ -8,6 +8,7 @@
 
 import UIKit
 import TraceLog
+import CoreData
 
 class DisplayNoteViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
