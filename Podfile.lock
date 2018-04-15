@@ -1,0 +1,18 @@
+PODS:
+  - TraceLog (2.1.0):
+    - TraceLog/Swift (= 2.1.0)
+  - TraceLog/Swift (2.1.0)
+
+DEPENDENCIES:
+  - TraceLog
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - TraceLog
+
+SPEC CHECKSUMS:
+  TraceLog: 0d0700cc6cbe4b1138410a6a29440f5b5801d218
+
+PODFILE CHECKSUM: 5296ccba42c55bcc7ba5b4264817f2c5891ba15c
+
+COCOAPODS: 1.5.0
