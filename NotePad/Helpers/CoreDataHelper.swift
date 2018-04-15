@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import TraceLog
 
 struct CoreDataHelper {
     static let context: NSManagedObjectContext = {
@@ -22,35 +23,50 @@ struct CoreDataHelper {
     }()
     
     static func newNote() -> Note {
+        logInfo { "Entering \(#function)" }
+            
         let note = NSEntityDescription.insertNewObject(forEntityName: "Note", into: context) as! Note
         
+        logInfo { "Leaving \(#function)" }
         return note
     }
     
     static func saveNote() {
+        logInfo { "Entering \(#function)" }
+        
         do {
             try context.save()
         } catch let error {
             print("Could not save \(error.localizedDescription)")
         }
+        
+        logInfo { "Leaving \(#function)" }
     }
     
     static func delete(note: Note) {
+        logInfo { "Entering \(#function)" }
+        
         context.delete(note)
         
         saveNote()
+        
+        logInfo { "Leaving \(#function)" }
     }
     
     static func retrieveNotes() -> [Note] {
+        logInfo { "Entering \(#function)" }
+        
         do {
             let fetchRequest = NSFetchRequest<Note>(entityName: "Note")
             let results = try context.fetch(fetchRequest)
             
+            logInfo { "Leaving \(#function)" }
             return results
             
         } catch let error {
             print("Could not fetch \(error.localizedDescription)")
             
+            logInfo { "Leaving \(#function)" }
             return []
         }
     }

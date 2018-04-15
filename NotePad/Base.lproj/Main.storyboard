@@ -78,7 +78,7 @@
             </objects>
             <point key="canvasLocation" x="767" y="-768"/>
         </scene>
-        <!--Viewing / Editing My Note-->
+        <!--My Note-->
         <scene sceneID="g4X-8a-krC">
             <objects>
                 <viewController id="gLI-0F-AFF" customClass="DisplayNoteViewController" customModule="NotePad" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8al-EU-1MS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Viewing / Editing My Note" id="cz2-4r-H2V">
+                    <navigationItem key="navigationItem" title="My Note" id="cz2-4r-H2V">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="dcp-Ts-Kwv">
                             <connections>
                                 <segue destination="S9W-fl-khH" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="zJw-V9-xGH"/>
