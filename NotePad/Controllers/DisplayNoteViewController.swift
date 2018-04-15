@@ -41,9 +41,11 @@ class DisplayNoteViewController: UIViewController {
         super.viewWillAppear(animated)
         logInfo { "Entering \(#function)" }
         
-        titleTextField.placeholder = "Create a title..."
-//        contentTextView.text = "placeholder"
-//        contentTextView.textColor = UIColor.lightGray
+        titleTextField.placeholder = "Add a title"
+        
+        //contentTextView.backgroundColor = UIColor.yellow
+        contentTextView!.layer.borderWidth = 3
+        contentTextView!.layer.borderColor = UIColor.black.cgColor
         
         // check note for an existing note
         if let note = note {
