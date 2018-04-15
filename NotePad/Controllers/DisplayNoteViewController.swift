@@ -18,6 +18,19 @@ class DisplayNoteViewController: UIViewController {
     
     var note: Note?
     
+//    // Now, with 3 short lines of code is where the magic happens
+//    // First the objects are wrapped up in a generic array
+//    var customObjects = [Note]()
+//    // Next, the .sorted(by:) method returns a collection that compares an element in the array against the next element and arranges the collection by date.
+//    // The sorted collection is assigned back to the customObjects array for display
+//    customObjects = customObjects.sorted(by: {
+//        $0.date.compare($1.date) == .orderedDescending
+//    })
+//    // The sorted customObjects collection is then printed out to display the objects sorted descending by date
+//    for obj in customObjects {
+//        print("Sorted Date: \(obj.date) with title: \(obj.title)")
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         logInfo { "Entering \(#function)" }

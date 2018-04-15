@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         logInfo { "Entering \(#function)" }
         
+        // some blue colour on title bar
         UINavigationBar.appearance().barTintColor = UIColor(red: 53.0/255.0, green: 115.0/255.0, blue: 214.0/255.0, alpha: 1.0)
         UINavigationBar.appearance().tintColor = UIColor(red: 242.0/255.0, green: 242.0/255.0, blue: 242.0/255.0, alpha: 1.0)
         

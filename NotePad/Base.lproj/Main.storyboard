@@ -67,7 +67,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="All My Notes" id="kId-LW-QIX">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="v9F-UT-MfZ">
+                        <barButtonItem key="rightBarButtonItem" image="add" id="v9F-UT-MfZ">
                             <connections>
                                 <segue destination="gLI-0F-AFF" kind="show" identifier="addNote" id="OIr-kO-S16"/>
                             </connections>
@@ -118,7 +118,7 @@
                                 <segue destination="S9W-fl-khH" kind="unwind" identifier="cancel" unwindAction="unwindWithSegue:" id="zJw-V9-xGH"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wjK-CW-zVd">
+                        <barButtonItem key="rightBarButtonItem" image="save" id="wjK-CW-zVd">
                             <connections>
                                 <segue destination="S9W-fl-khH" kind="unwind" identifier="save" unwindAction="unwindWithSegue:" id="R5y-vx-aPI"/>
                             </connections>
@@ -153,6 +153,10 @@
             <point key="canvasLocation" x="20" y="-759.67016491754134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="add" width="33" height="33"/>
+        <image name="save" width="33" height="33"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="OIr-kO-S16"/>
     </inferredMetricsTieBreakers>
