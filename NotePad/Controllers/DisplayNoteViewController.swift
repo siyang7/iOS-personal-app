@@ -27,6 +27,10 @@ class DisplayNoteViewController: UIViewController {
         super.viewWillAppear(animated)
         logInfo { "Entering \(#function)" }
         
+        titleTextField.placeholder = "Create a title..."
+//        contentTextView.text = "placeholder"
+//        contentTextView.textColor = UIColor.lightGray
+        
         // check note for an existing note
         if let note = note {
             // populates the text field & text view w/ the content of existing note
