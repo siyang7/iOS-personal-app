@@ -58,6 +58,11 @@ struct CoreDataHelper {
         
         do {
             let fetchRequest = NSFetchRequest<Note>(entityName: "Note")
+            // Edit the sort key as appropriate.
+            let sortDescriptor = NSSortDescriptor(key: "modificationTime", ascending: false)
+            
+            fetchRequest.sortDescriptors = [sortDescriptor]
+            
             let results = try context.fetch(fetchRequest)
             
             logInfo { "Leaving \(#function)" }
