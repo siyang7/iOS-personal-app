@@ -34,8 +34,8 @@ class DisplayNoteViewController: UIViewController {
         contentTextView!.layer.borderWidth = 3
         contentTextView!.layer.borderColor = UIColor.black.cgColor
         
-//        var lines:UnderlinedTextView!
-//        lines.draw(CGRect(0, 0, width: 1, height: 1))
+        var lines:UnderlinedTextView!
+        lines.draw(CGRect(x: CGFloat(20), y: CGFloat(20), width: CGFloat(400), height: CGFloat(400)))
         
         // check note for an existing note
         if let note = note {
