@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2BEE476E1F9190E11D326A8A /* Pods_NotePad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 867D7EB235763D1B069E16CB /* Pods_NotePad.framework */; };
 		F833C23D2082EF6300A453E7 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833C23C2082EF6300A453E7 /* CoreDataHelper.swift */; };
+		F83A779020899C4C006D96D3 /* UnderlinedTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83A778F20899C4C006D96D3 /* UnderlinedTextView.swift */; };
 		F89327D12082AA15006A2532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89327D02082AA15006A2532 /* AppDelegate.swift */; };
 		F89327D62082AA15006A2532 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F89327D42082AA15006A2532 /* Main.storyboard */; };
 		F89327D92082AA15006A2532 /* NotePad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F89327D72082AA15006A2532 /* NotePad.xcdatamodeld */; };
@@ -25,6 +26,7 @@
 		706BEDAAEF93BC34B95B8218 /* Pods-NotePad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotePad.release.xcconfig"; path = "Pods/Target Support Files/Pods-NotePad/Pods-NotePad.release.xcconfig"; sourceTree = "<group>"; };
 		867D7EB235763D1B069E16CB /* Pods_NotePad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotePad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F833C23C2082EF6300A453E7 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		F83A778F20899C4C006D96D3 /* UnderlinedTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderlinedTextView.swift; sourceTree = "<group>"; };
 		F89327CD2082AA15006A2532 /* NotePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F89327D02082AA15006A2532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F89327D52082AA15006A2532 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				F833C23C2082EF6300A453E7 /* CoreDataHelper.swift */,
+				F83A778F20899C4C006D96D3 /* UnderlinedTextView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				F89327D92082AA15006A2532 /* NotePad.xcdatamodeld in Sources */,
 				F89327ED2082AB20006A2532 /* ListNotesTableViewController.swift in Sources */,
 				F89327F12082AB6A006A2532 /* ListNotesTableViewCell.swift in Sources */,
+				F83A779020899C4C006D96D3 /* UnderlinedTextView.swift in Sources */,
 				F833C23D2082EF6300A453E7 /* CoreDataHelper.swift in Sources */,
 				F89327EB2082AB00006A2532 /* Date+convertToString.swift in Sources */,
 				F89327EF2082AB37006A2532 /* DisplayNoteViewController.swift in Sources */,

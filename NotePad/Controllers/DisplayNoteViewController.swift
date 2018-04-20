@@ -10,6 +10,7 @@ import UIKit
 import TraceLog
 import CoreData
 
+//class DisplayNoteViewController: UIViewController, UITextViewDelegate {
 class DisplayNoteViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var contentTextView: UITextView!
@@ -21,7 +22,39 @@ class DisplayNoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         logInfo { "Entering \(#function)" }
+        
+//        contentTextView.text = "Add your notes here..."
+//        contentTextView.textColor = UIColor.lightGray
+//        contentTextView.font = UIFont(name: "verdana", size: 16.0)
+//        contentTextView.returnKeyType = .done
+//
+//        contentTextView.delegate = self
+        
         logInfo { "Leaving \(#function)" }
+    }
+    
+//    func textViewDidBeginEditing(_ textView: UITextView) {
+//        if contentTextView.text == "Add your notes here..." {
+//            contentTextView.text = ""
+//            contentTextView.textColor = UIColor.black
+//            contentTextView.font = UIFont(name: "verdana", size: 16.0)
+//        }
+//    }
+//
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        if contentTextView.text == "" {
+//            contentTextView.text = "Add your notes here..."
+//            contentTextView.textColor = UIColor.lightGray
+//            contentTextView.font = UIFont(name: "verdana", size: 16.0)
+//        }
+//    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            contentTextView.resignFirstResponder()
+        }
+        
+        return true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,8 +67,8 @@ class DisplayNoteViewController: UIViewController {
         contentTextView!.layer.borderWidth = 3
         contentTextView!.layer.borderColor = UIColor.black.cgColor
         
-        var lines:UnderlinedTextView!
-        lines.draw(CGRect(x: CGFloat(20), y: CGFloat(20), width: CGFloat(400), height: CGFloat(400)))
+//        var lines = UnderlinedTextView()
+//        lines.draw(CGRect(x: 0, y: 0, width: 100, height: 100))
         
         // check note for an existing note
         if let note = note {
@@ -90,36 +123,3 @@ class DisplayNoteViewController: UIViewController {
         logInfo { "Leaving \(#function)" }
     }
 }
-
-class UnderlinedTextView: UITextView {
-    var lineHeight: CGFloat = 13.8
-    
-    override var font: UIFont? {
-        didSet {
-            if let newFont = font {
-                lineHeight = newFont.lineHeight
-            }
-        }
-    }
-    
-    override func draw(_ rect: CGRect) {
-        let ctx = UIGraphicsGetCurrentContext()
-        
-        let numberOfLines = Int(rect.height / lineHeight)
-        let topInset = textContainerInset.top
-        
-        for i in 1...numberOfLines {
-            let y = topInset + CGFloat(i) * lineHeight
-            
-            let line = CGMutablePath()
-            line.move(to: CGPoint(x: 0.0, y: y))
-            line.addLine(to: CGPoint(x: rect.width, y: y))
-            ctx?.addPath(line)
-        }
-        
-        ctx?.strokePath()
-        
-        super.draw(rect)
-    }
-}
-
